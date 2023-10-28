@@ -8,6 +8,7 @@ import { GifsService } from '../../../gifs/services/gifs.service';
 })
 export class SidebarComponent {
 
+  // Here we are injecting the service
   // private gifsService
   constructor( private gifsService: GifsService  ) {}
 

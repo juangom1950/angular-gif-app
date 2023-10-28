@@ -7,6 +7,7 @@
       *ngFor="let tag of tags"
       (click)="searchTag( tag )"
       class="list-group-item list-group-item-action">
+      <!-- This write things with the 1st letter of each word UpperCase -->
       {{ tag | titlecase }}
     </button>
   </div>

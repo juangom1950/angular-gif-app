@@ -16,10 +16,11 @@ import { GifsService } from '../../services/gifs.service';
 
 export class SearchBoxComponent  {
 
+  // Here with the "!" I am telling it that it always going to have a value
   @ViewChild('txtTagInput')
   public tagInput!: ElementRef<HTMLInputElement>;
 
-
+  // Here we are injecting the service
   constructor( private gifsService: GifsService ) { }
 
 
@@ -29,6 +30,7 @@ export class SearchBoxComponent  {
 
     this.gifsService.searchTag(newTag);
 
+    // Reset value
     this.tagInput.nativeElement.value = '';
 
   }

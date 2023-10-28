@@ -16,6 +16,7 @@ import { CardListComponent } from './components/card-list/card-list.component';
   imports: [
     CommonModule
   ],
+  // We don't need to export all the components that are inside the HomePageComponent
   exports: [
     HomePageComponent,
   ]
