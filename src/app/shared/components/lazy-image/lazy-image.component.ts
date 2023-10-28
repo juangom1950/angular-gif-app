@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LazyImageComponent implements OnInit {
 
+  // This comes from card.component.ts
   @Input()
   public url!: string;
 
@@ -16,12 +17,15 @@ export class LazyImageComponent implements OnInit {
   public hasLoaded: boolean = false;
 
 
+  // Validate if this url doesn't comes
   ngOnInit(): void {
     if ( !this.url ) throw new Error('URL property is required');
   }
 
   onLoad() {
-    this.hasLoaded = true;
+    setTimeout(() => {
+      this.hasLoaded = true;
+    }, 1000)
   }
 
 
